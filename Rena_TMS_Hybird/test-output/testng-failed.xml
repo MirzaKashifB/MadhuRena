@@ -6,8 +6,8 @@
       <class name="com.Rena.TMS.BookingTest">
         <methods>
           <include name="bookingTest"/>
-          <include name="adminLogini"/>
           <include name="openBrowser"/>
+          <include name="adminLogini"/>
           <include name="adminLogoutt"/>
           <include name="closeBrowser"/>
           <include name="connectToDB"/>

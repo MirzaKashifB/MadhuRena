@@ -59,7 +59,7 @@ public class BaseClass
 	@BeforeSuite(groups= {"smokeTest","reggTest"})
 	public void connectToDB()
 	{
-		dLib.connectiontoJDBC();
+		//dLib.connectiontoJDBC();
 		System.out.println("connected to db");   
 	}
 	/**
@@ -77,9 +77,9 @@ public class BaseClass
 		FILE_PATH = fLib.getExternalFileData("PropertyFilePath");
 	    String BROWSER =System.getProperty("browser", fLib.getPropertyData(FILE_PATH, "browser"));
 		String URL = System.getProperty("url",fLib.getPropertyData(FILE_PATH, "url"));
-		WebDriverManager.chromedriver().setup();
-		WebDriverManager.firefoxdriver().setup();
-		WebDriverManager.edgedriver().setup();
+//		WebDriverManager.chromedriver().setup();
+//		WebDriverManager.firefoxdriver().setup();
+//		WebDriverManager.edgedriver().setup();
 		if(BROWSER.equalsIgnoreCase("chrome"))
 		{
 			driver= new ChromeDriver();
@@ -142,7 +142,7 @@ public class BaseClass
 	@AfterSuite(groups= {"smokeTest","reggTest"})
 	public void closeDB() throws SQLException
 	{
-		dLib.closeJDBC();
+		//dLib.closeJDBC();
 		System.out.println("close DB");  
 	}
 	/**
